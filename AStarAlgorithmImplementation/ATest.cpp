@@ -24,7 +24,7 @@ int main(){
     cout << "Graph Size: " << graph.size() << endl;
 
     cout << "Start: " << start.x << ", " << start.y << " Goal: " << goal.x << ", " << goal.y << endl;
-    cout << "Path: ";
+    cout << "Path: \n";
     vector<Node> Path = FindPath(graph, start, goal);
     PrintPath(Path);
 
@@ -32,7 +32,7 @@ int main(){
 
 void PrintPath(vector<Node>& path){
     for (Node& node : path){
-        cout << "(" << node.x << ", " << node.y << ") G value:" << node.g << " H value:" << node.h << " H value:" << node.f << ", \n";
+        cout << "(" << node.x << ", " << node.y << ") G value: " << node.g << ", H value: " << node.h << ", H value: " << node.f << ", \n";
     }
     cout << endl;
 }
